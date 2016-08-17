@@ -37,8 +37,8 @@ In Gebäude 8 is a person.
 Instead of examining the person:
 	say "This person looks overworked and near the burnout. But in his cheek there seems to be a squirrel."
 	
-Instead of talking to the person: 
-	say "Don't you know you should not bother working people?"
+[Instead of talking to the person: 
+	say "Don't you know you should not bother working people?"]
 	
 
 
