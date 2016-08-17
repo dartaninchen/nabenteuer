@@ -45,7 +45,7 @@ Instead of examining the person:
 south of Gebäude 6 is Gebäude 8. east of Gebäude 8 is das echte Häuschen.
 
 south of cafeteria is das echte Häuschen.
-In das echte Häuschen is a firefox. 
+In das echte Häuschen is a firefox. The description is "ooooh so cute und fluffy und süß".
 
 southeast of das echte Häuschen is the free coffee place.
 
