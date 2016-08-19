@@ -12,11 +12,11 @@ The Description of Lady is "She looks perfectly accurate and well brushed. Only 
 Definition: A person is another if it is not the player. 
 
 [Instead of asking the lady about the staff card:
-	say "Oh, so you're the new intern, right? Here is your card. Watch it well, it is exclusively for you."
+	say "Oh, so you're the new intern, right? Here is your card. Watch it well, it is exclusively for you."]
 	
-Talking is an action applying to nothing. Instead of talking to the  Lady:
-	say "How can I help you?"
-	now staff card is in your inventory. 
+[Instead of talking to Lady about something:
+	say "How can I help you?"]
+	[now staff card is in your inventory. 
 	now the big door is open.]
 	
 The big door is south of welcoming hall and north of the cafeteria. 
@@ -24,7 +24,7 @@ The big door is south of welcoming hall and north of the cafeteria.
 
 south of the big door is the cafeteria. The big door is a door. The big door is locked. 
 Instead of examining the big door: 
-	say "A glamorous, exciting world is visible through the glass... Or wait, is there just a huge mass of work waiting? You need to find out. Get a staff card to enter."
+	say "A glamorous, exciting world is visible through the glass... Or wait, is there just a huge mass of work waiting? You need to find out. [end if staff card is in inventory] Get a staff card to enter."
 
 north of the free coffee place is an iron door. Iron door is a door. 
 
