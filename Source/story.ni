@@ -1,11 +1,39 @@
 "The golden coffee" by "maya rollberg"
 
 when play begins: 
-	say "Far away in a place without passion and empathy there is a beverage hidden, keeping  love and affection away from the people beeing there, day in and day out. As you are a young idealist, trying to save the world by  boycotting plasticbags and loving nature, you want to change this place where you heard they were still using to go coffee cups. As you heard about the sad story of this place, you were filled by wanderlust to see what is true about the secret beverage, keeping all good things from man.
+	say "Far away in a place without passion and empathy there is a beverage hidden, keeping  love and affection away from the people being there, day in and day out. As you are a young idealist, trying to save the world by  boycotting plastic bags and loving nature, you want to change this place where you heard they were still using to go coffee cups. As you heard about the sad story of this place, you were filled by wanderlust to see what is true about the secret beverage, keeping all good things from man.
 	[paragraph break]
 	After a long walk, you enter the welcoming hall." 
 	
-welcoming hall is a room. south of welcoming hall is the cafeteria. 
+welcoming hall is a room. The Description of welcoming hall is "A hell of a welcoming hall. The light is breaking through the window. The Lady sitting behind the desk smiles friendly at you, holding a cup of coffee in her hand, shaking a little." 
+In welcoming hall is a Lady. Lady is a person. Lady is female. 
+The Description of Lady is "She looks perfectly accurate and well brushed. Only her trembling left eye seems unusual." 
+
+Definition: A person is another if it is not the player. 
+
+[Instead of asking the lady about the staff card:
+	say "Oh, so you're the new intern, right? Here is your card. Watch it well, it is exclusively for you."
+	
+Talking is an action applying to nothing. Instead of talking to the  Lady:
+	say "How can I help you?"
+	now staff card is in your inventory. 
+	now the big door is open.]
+	
+The big door is south of welcoming hall and north of the cafeteria. 
+
+
+south of the big door is the cafeteria. The big door is a door. The big door is locked. 
+Instead of examining the big door: 
+	say "A glamorous, exciting world is visible through the glass... Or wait, is there just a huge mass of work waiting? You need to find out. Get a staff card to enter."
+
+north of the free coffee place is an iron door. Iron door is a door. 
+
+the iron door is southeast of welcoming hall.
+
+Instead of examining the iron door: 
+	say "This seems to be a secret abbreviation. You need more than just a staff card to enter."
+	
+Cafeteria is a room. The description of cafeteria is "Of course you were following your nose. The cafeteria offers food with a lower quality, but your not here to search for michelin stars. "
 
 There is a bar in cafeteria. The bar is a supporter. There is also Ralfs Workplace in the cafeteria. Ralfs Workplace is an enterable supporter. 
 
@@ -25,17 +53,23 @@ instead of examining a cup (called the cup of coffee):
 
 Instead of drinking a cup (called the drinkthing):
 	if the drinkthing is full:
-		say "Aaah."; 
+		say "So hot you nearly burned your tongue. But besides that, you miss the normal effect of coffee."; 
 		now the drinkthing is empty;
 	otherwise: 
-		say "son scheiß is leer.".
+		say "There is not a sip left, and the cup feels cold and soulless.".
 		
 west of cafeteria is Gebäude 6.
-In Gebäude 6  is a table. a table is a supporter. On the table is paper.
 
-In Gebäude 8 is a person. 
-Instead of examining the person:
-	say "This person looks overworked and near the burnout. But in his cheek there seems to be a squirrel."
+
+In Gebäude 8  is a table. a table is a supporter. On the table is a letter.
+A Letter is a container. The Letter is closed. 
+Instead of examining the letter:
+	say "It is closed and addressed to: The Saviour"
+	
+Instead of opening the letter:
+	say "You open the letter and it reveals a paper with handwritten letters on it. You can hardly read but it says : Dear Saviour. I hoped you would come one day, when it all went down the road. Somebody has to help these people. They need a way out of the darkness. You have to get them to the light of mankind. Hang it out and make them UNDERSTAND. and get them good coffee. My appreciations, Krid Reldan";
+	now the letter is open;
+
 	
 [Instead of talking to the person: 
 	say "Don't you know you should not bother working people?"]
@@ -49,9 +83,6 @@ In das echte Häuschen is a firefox. The description is "ooooh so cute und fluff
 
 southeast of das echte Häuschen is the free coffee place.
 
-north of the free coffee place is an iron door. Iron door is a door. 
-
-the iron door is southeast of welcoming hall.
 
 below das echte Häuschen is the cellar.
 
