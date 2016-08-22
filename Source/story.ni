@@ -11,9 +11,11 @@ The Description of Lady is "She looks perfectly accurate and well brushed. Only 
 
 Definition: A person is another if it is not the player. 
 
-[Instead of asking the lady about the staff card:
-	say "Oh, so you're the new intern, right? Here is your card. Watch it well, it is exclusively for you."]
-	
+Instead of asking the lady about "[staff card]":
+	say "Oh, so you're the new intern, right? Here is your card. Watch it well, it is exclusively for you."
+
+understand "the staff card", "card", "staff card" as "[staff card]".
+
 [Instead of talking to Lady about something:
 	say "How can I help you?"]
 	[now staff card is in your inventory. 
