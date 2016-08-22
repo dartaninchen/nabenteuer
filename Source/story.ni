@@ -1,7 +1,7 @@
 "The golden coffee" by "maya rollberg"
 
 when play begins: 
-	say "Far away in a place without passion and empathy there is a beverage hidden, keeping  love and affection away from the people being there, day in and day out. As you are a young idealist, trying to save the world by  boycotting plastic bags and loving nature, you want to change this place where you heard they were still using to go coffee cups. As you heard about the sad story of this place, you were filled by wanderlust to see what is true about the secret beverage, keeping all good things from man.
+	say "Far away in a place longing for passion and empathy, there is a beverage hidden, keeping  love and affection away from the people being there, day in and day out. As you are a young idealist, trying to save the world by  boycotting plastic bags and loving nature, you want to change this place where you heard they were still using to go coffee cups. As you heard about the sad story of this place, you were filled by wanderlust to see what is true about the secret beverage, keeping all good things from man.
 	[paragraph break]
 	After a long walk, you enter the welcoming hall." 
 	
@@ -24,7 +24,8 @@ The big door is south of welcoming hall and north of the cafeteria.
 
 south of the big door is the cafeteria. The big door is a door. The big door is locked. 
 Instead of examining the big door: 
-	say "A glamorous, exciting world is visible through the glass... Or wait, is there just a huge mass of work waiting? You need to find out. [end if staff card is in inventory] Get a staff card to enter."
+	say "A glamorous, exciting world is visible through the glass... Or wait, is there just a huge mass of work waiting? You need to find out."
+	[[end if staff card is in inventory] Get a staff card to enter."]
 
 north of the free coffee place is an iron door. Iron door is a door. 
 
@@ -40,23 +41,23 @@ There is a bar in cafeteria. The bar is a supporter. There is also Ralfs Workpla
 instead of examining Ralfs Workplace:
 	say "Ralfs Workplace looks so comfortable. Look at these cute pillows. Who would not want to work here?"
 
-A cup is a kind of thing. a cup can be empty or full. a cup is usually full.
+A bottle is a kind of thing. a bottle can be empty or full. a bottle is usually full.
 
 
-On the bar is a cup of coffee. the cup of coffee is a cup. 
+On the bar is a bottle of Mate Tea. the bottle of Mate tea is a bottle. 
 
-instead of examining a cup (called the cup of coffee):
-	if the cup of coffee is full:
-		say "The [cup of coffee] is still hot but the coffee is darker than jakobs soul.";
+instead of examining a bottle (called the bottle of Mate Tea):
+	if the bottle of Mate Tea is full:
+		say "The [bottle of Mate Tea] is here for you to bring you back to your original amount of energy.";
 	otherwise:
-		say "The [cup of coffee] is empty, but you need more of that devilry.".
+		say "The [bottle of Mate Tea] is empty, but you need more of that south american masterpiece.".
 
-Instead of drinking a cup (called the drinkthing):
+Instead of drinking a bottle (called the drinkthing):
 	if the drinkthing is full:
-		say "So hot you nearly burned your tongue. But besides that, you miss the normal effect of coffee."; 
+		say "Whoa, energy boost. Brain freeze!"; 
 		now the drinkthing is empty;
 	otherwise: 
-		say "There is not a sip left, and the cup feels cold and soulless.".
+		say "There is not a sip left. And no, there is no point in getting a drinking straw right now".
 		
 west of cafeteria is Gebäude 6.
 
@@ -82,7 +83,16 @@ south of cafeteria is das echte Häuschen.
 In das echte Häuschen is a firefox. The description is "ooooh so cute und fluffy und süß".
 
 southeast of das echte Häuschen is the free coffee place.
+A coffee machine is a kind of thing. A coffee machine can be working or  broken. A coffee machine is usually working. Coffee machine is usually fixed in place. In the free coffee place is a coffee machine. 
 
+Instead of examining the coffee machine: 
+	say "Real coffee beans? Authentic milk? And there is no slot to pay for it! That is actually FREE COFFEE!"
+	
+Instead of taking something (called the coffee): 
+	say "You just press the button and there it comes. freshly brewed cappuccino. As you drink it, you acertain that it is not the best cappuccino you have ever drunken, but it ain't bad for a free cappuccino."
+
+Understand "get", "drink" as taking.
+	
 
 below das echte Häuschen is the cellar.
 
