@@ -25,12 +25,8 @@ staff card is a thing.
 
 south of the big door is the cafeteria. The big door is a door. The big door is locked. 
 Instead of examining the big door: 
-<<<<<<< HEAD
-	say "A glamorous, exciting world is visible through the glass... Or wait, is there just a huge mass of work waiting? You need to find out."
-	[[end if staff card is in inventory] Get a staff card to enter."]
-=======
 	say "A glamorous, exciting world is visible through the glass... Or wait, is there just a huge mass of work waiting? You need to find out. [if staff card is carried by the player] Get a staff card to enter.[end if]"
->>>>>>> 07fafdacd1e1e394f320084031920ee317c47ceb
+
 
 north of the free coffee place is an iron door. Iron door is a door. 
 
