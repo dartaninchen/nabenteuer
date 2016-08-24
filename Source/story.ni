@@ -13,14 +13,13 @@ Definition: A person is another if it is not the player.
 
 	
 Instead of asking the lady about "[staff card]":
-	say "Oh, so you're the new intern, right? Here is your card. Watch it well, it is exclusively for you."
+	say "Oh, so you're the new intern, right? Here is your card. Watch it well, it is exclusively for you.";
+	now the player carries the staff card;
+	say "You quickly pocket the staff card ";
+	now big door is open;
+	say "and you are allowed to walk straight south through the big door.".
 
 understand "the staff card", "card", "staff card", "entrance" as "[staff card]".
-
-[Instead of talking to Lady about something:
-	say "How can I help you?"]
-	[now staff card is in your inventory. 
-	now the big door is open.]
 	
 The big door is south of welcoming hall and north of the cafeteria. 
 
@@ -50,30 +49,28 @@ A bottle is a kind of thing. a bottle can be empty or full. a bottle is usually 
 
 On the bar is a bottle of Mate Tea. the bottle of Mate tea is a bottle. 
 
-instead of examining a bottle (called the bottle of Mate Tea):
-	if the bottle of Mate Tea is full:
-		say "The [bottle of Mate Tea] is here for you to bring you back to your original amount of energy.";
+instead of examining a bottle (called the drinkthing):
+	if the drinkthing is full:
+		say "The [drinkthing] is here for you to bring you back to your original amount of energy.";
 	otherwise:
-		say "The [bottle of Mate Tea] is empty, but you need more of that south american masterpiece.".
+		say "The [drinkthing] is empty, but you need more of that south american masterpiece.".
 
 Instead of drinking a bottle (called the drinkthing):
 	if the drinkthing is full:
 		say "Whoa, energy boost. Brain freeze!"; 
 		now the drinkthing is empty;
 	otherwise: 
-		say "There is not a sip left. And no, there is no point in getting a drinking straw right now".
+		say "There is not a sip left. And no, there is no point in getting a drinking straw right now.".
 		
 west of cafeteria is Gebäude 6.
 
 
 In Gebäude 8  is a table. a table is a supporter. On the table is a letter.
-A Letter is a container. The Letter is closed. 
-Instead of examining the letter:
-	say "It is closed and addressed to: The Saviour"
+A Letter is a container. The Letter is closed. the letter is openable.
+the description of the letter is "[if the letter is closed]It is closed and addressed to: The Saviour[otherwise][italic type]Dear Saviour. I hoped you would come one day, when it all went down the road. Somebody has to help these people. They need a way out of the darkness. You have to get them to the light of mankind. Hang it out and make them UNDERSTAND. and get them good coffee. [paragraph break]My appreciations, Krid Reldan[end if]"
 	
-Instead of opening the letter:
-	say "You open the letter and it reveals a paper with handwritten letters on it. You can hardly read but it says : Dear Saviour. I hoped you would come one day, when it all went down the road. Somebody has to help these people. They need a way out of the darkness. You have to get them to the light of mankind. Hang it out and make them UNDERSTAND. and get them good coffee. My appreciations, Krid Reldan";
-	now the letter is open;
+after opening the letter for the first time:
+	say "You open the letter and it reveals a paper with handwritten letters on it. You can hardly read but it says : [italic type]Dear Saviour. I hoped you would come one day, when it all went down the road. Somebody has to help these people. They need a way out of the darkness. You have to get them to the light of mankind. Hang it out and make them UNDERSTAND. and get them good coffee. My appreciations, Krid Reldan".
 
 	
 [Instead of talking to the person: 
@@ -88,11 +85,11 @@ In das echte Häuschen is a firefox. The description is "ooooh so cute und fluff
 
 southeast of das echte Häuschen is the free coffee place.
 A coffee machine is an open container. Coffee machine is fixed in place. In the free coffee place is a coffee machine. 
-A mug is an open container. mug is not fixed in place. In the free coffee place is a mug. 
 
-Instead of taking the mug: 
-	say "Brilliant, now you can pour coffee into your mug like normal people do.";
-	now mug is carried by the player.
+A mug is an open container. In the free coffee place is a mug. 
+
+after taking the mug: 
+	say "Brilliant, now you can pour coffee into your mug like normal people do.".
 	
 Supplying is an action applying to one thing. 
 	
@@ -107,8 +104,10 @@ endless supply of coffee: "Hello, tall, dark, and endless." SMELL SUPPLY: "Smell
 cupful of coffee: "The coffee in the mug looks quite drinkable." SMELL CUPFUL: "Smells good. A cupful of good." DRINK CUPFUL: removes the cupful from scope and says, "You drink the mug of coffee. Aaah. The satisfaction." Disallow TAKE CUPFUL or REMOVE CUPFUL because it's a liquid. When the cupful is in scope, X COFFEE, SMELL COFFEE, etc. must refer to the cupful.
 Instead of examining the coffee machine: 
 	say "Real coffee beans? Authentic milk? And there is no slot to pay for it! That is actually FREE COFFEE! ENDLESS SUPPLY! Perhaps you'd like to pour some into a mug?"]
+
+the description of coffee machine is "wonderful, glorious".
 	
-Instead of taking something (called the coffee): 
+after taking the mug: 
 	say "You just press the button and there it comes. freshly brewed cappuccino. As you drink it, you acertain that it is not the best cappuccino you have ever drunken, but it ain't bad for a free cappuccino."
 
 Understand "get", "drink" as taking.
