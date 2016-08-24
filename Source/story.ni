@@ -51,7 +51,7 @@ On the bar is a bottle of Mate Tea. the bottle of Mate tea is a bottle.
 
 instead of examining a bottle (called the drinkthing):
 	if the drinkthing is full:
-		say "The [drinkthing] is here for you to bring you back to your original amount of energy.";
+		say "The [drinkthing] is full and its here for you to bring you back to your original amount of energy.";
 	otherwise:
 		say "The [drinkthing] is empty, but you need more of that south american masterpiece.".
 
@@ -84,12 +84,31 @@ south of cafeteria is das echte Häuschen.
 In das echte Häuschen is a firefox. The description is "ooooh so cute und fluffy und süß".
 
 southeast of das echte Häuschen is the free coffee place.
-A coffee machine is an open container. Coffee machine is fixed in place. In the free coffee place is a coffee machine. 
+A coffee machine is a device. Coffee machine is fixed in place. In the free coffee place is a coffee machine. 
 
-A mug is an open container. In the free coffee place is a mug. 
+A Button is part of the coffee machine.
+
+instead of pushing the button:
+	try switching on the coffee machine.
+
+after switching on the coffee machine:
+	if the player carries the mug:
+		say "es laeuft";
+		now the mug is full;
+	now the coffee machine is switched off.
+
+understand "press" as pushing. 
+
+[A mug is an open container. ]
+
+the mug is a bottle.
+
+In the free coffee place is a mug. 
 
 after taking the mug: 
 	say "Brilliant, now you can pour coffee into your mug like normal people do.".
+
+
 	
 Supplying is an action applying to one thing. 
 	
@@ -105,7 +124,7 @@ cupful of coffee: "The coffee in the mug looks quite drinkable." SMELL CUPFUL: "
 Instead of examining the coffee machine: 
 	say "Real coffee beans? Authentic milk? And there is no slot to pay for it! That is actually FREE COFFEE! ENDLESS SUPPLY! Perhaps you'd like to pour some into a mug?"]
 
-the description of coffee machine is "wonderful, glorious".
+the description of coffee machine is "Brown and has a [button] to produce freshly brewed coffee.".
 	
 after taking the mug: 
 	say "You just press the button and there it comes. freshly brewed cappuccino. As you drink it, you acertain that it is not the best cappuccino you have ever drunken, but it ain't bad for a free cappuccino."
