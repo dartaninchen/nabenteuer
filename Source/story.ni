@@ -11,10 +11,11 @@ The Description of Lady is "She looks perfectly accurate and well brushed. Only 
 
 Definition: A person is another if it is not the player. 
 
+	
 Instead of asking the lady about "[staff card]":
 	say "Oh, so you're the new intern, right? Here is your card. Watch it well, it is exclusively for you."
 
-understand "the staff card", "card", "staff card" as "[staff card]".
+understand "the staff card", "card", "staff card", "entrance" as "[staff card]".
 
 [Instead of talking to Lady about something:
 	say "How can I help you?"]
@@ -86,10 +87,26 @@ south of cafeteria is das echte Häuschen.
 In das echte Häuschen is a firefox. The description is "ooooh so cute und fluffy und süß".
 
 southeast of das echte Häuschen is the free coffee place.
-A coffee machine is a kind of thing. A coffee machine can be working or  broken. A coffee machine is usually working. Coffee machine is usually fixed in place. In the free coffee place is a coffee machine. 
+A coffee machine is an open container. Coffee machine is fixed in place. In the free coffee place is a coffee machine. 
+A mug is an open container. mug is not fixed in place. In the free coffee place is a mug. 
 
+Instead of taking the mug: 
+	say "Brilliant, now you can pour coffee into your mug like normal people do.";
+	now mug is carried by the player.
+	
+Supplying is an action applying to one thing. 
+	
+[Instead of :
+	if mug is carried by player;
+	say" "You just press the button and there it comes. freshly brewed cappuccino.";
+	otherwise "But you don't have a mug, where do you come from?!".]
+
+	
+[The urn is a immovable open container. POUR URN (INTO MUG) should do the same as POUR SUPPLY (INTO MUG). If the mug isn't here, POUR SUPPLY should complain "But you don't have a mug!" If the mug is full, POUR SUPPLY should complain "But the mug is full!" Otherwise, POUR SUPPLY should put the cupful into the mug, saying "Using the urn, you fill the mug with hot coffee." Disallow EMPTY URN: "You can't empty the urn."
+endless supply of coffee: "Hello, tall, dark, and endless." SMELL SUPPLY: "Smells good. Endlessly good." DRINK SUPPLY: "How rude! Use a mug!" Disallow TAKE SUPPLY or REMOVE SUPPLY because it's a liquid. Assuming that the cupful isn't in scope, X COFFEE, SMELL COFFEE, etc. should refer to the supply.
+cupful of coffee: "The coffee in the mug looks quite drinkable." SMELL CUPFUL: "Smells good. A cupful of good." DRINK CUPFUL: removes the cupful from scope and says, "You drink the mug of coffee. Aaah. The satisfaction." Disallow TAKE CUPFUL or REMOVE CUPFUL because it's a liquid. When the cupful is in scope, X COFFEE, SMELL COFFEE, etc. must refer to the cupful.
 Instead of examining the coffee machine: 
-	say "Real coffee beans? Authentic milk? And there is no slot to pay for it! That is actually FREE COFFEE!"
+	say "Real coffee beans? Authentic milk? And there is no slot to pay for it! That is actually FREE COFFEE! ENDLESS SUPPLY! Perhaps you'd like to pour some into a mug?"]
 	
 Instead of taking something (called the coffee): 
 	say "You just press the button and there it comes. freshly brewed cappuccino. As you drink it, you acertain that it is not the best cappuccino you have ever drunken, but it ain't bad for a free cappuccino."
