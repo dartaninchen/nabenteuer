@@ -108,7 +108,12 @@ In the free coffee place is a mug.
 after taking the mug: 
 	say "Brilliant, now you can pour coffee into your mug like normal people do.".
 
-
+Instead of drinking the mug:
+	if mug is full:
+		say "Ain't bad for a free cappuccino.";
+	otherwise:
+		say "How about you at least push the button yourself?".
+		
 	
 Supplying is an action applying to one thing. 
 	
@@ -117,14 +122,7 @@ Supplying is an action applying to one thing.
 	say" "You just press the button and there it comes. freshly brewed cappuccino.";
 	otherwise "But you don't have a mug, where do you come from?!".]
 
-	
-[The urn is a immovable open container. POUR URN (INTO MUG) should do the same as POUR SUPPLY (INTO MUG). If the mug isn't here, POUR SUPPLY should complain "But you don't have a mug!" If the mug is full, POUR SUPPLY should complain "But the mug is full!" Otherwise, POUR SUPPLY should put the cupful into the mug, saying "Using the urn, you fill the mug with hot coffee." Disallow EMPTY URN: "You can't empty the urn."
-endless supply of coffee: "Hello, tall, dark, and endless." SMELL SUPPLY: "Smells good. Endlessly good." DRINK SUPPLY: "How rude! Use a mug!" Disallow TAKE SUPPLY or REMOVE SUPPLY because it's a liquid. Assuming that the cupful isn't in scope, X COFFEE, SMELL COFFEE, etc. should refer to the supply.
-cupful of coffee: "The coffee in the mug looks quite drinkable." SMELL CUPFUL: "Smells good. A cupful of good." DRINK CUPFUL: removes the cupful from scope and says, "You drink the mug of coffee. Aaah. The satisfaction." Disallow TAKE CUPFUL or REMOVE CUPFUL because it's a liquid. When the cupful is in scope, X COFFEE, SMELL COFFEE, etc. must refer to the cupful.
-Instead of examining the coffee machine: 
-	say "Real coffee beans? Authentic milk? And there is no slot to pay for it! That is actually FREE COFFEE! ENDLESS SUPPLY! Perhaps you'd like to pour some into a mug?"]
-
-the description of coffee machine is "Brown and has a [button] to produce freshly brewed coffee.".
+the description of coffee machine is "Italian style and german functionality are combined in this piece. It has a [button] to produce freshly brewed coffee.".
 	
 after taking the mug: 
 	say "You just press the button and there it comes. freshly brewed cappuccino. As you drink it, you acertain that it is not the best cappuccino you have ever drunken, but it ain't bad for a free cappuccino."
@@ -133,6 +131,11 @@ Understand "get", "drink" as taking.
 	
 
 below das echte Häuschen is the cellar.
+ The description of cellar is "You have never been so deep in the earth before. There are big drains surrounding you. There is a trace of paper snippets leading east. You can go west and east, following the paper snippets."
+
+West of the cellar is the sewerage. The description of sewerage is "The good thing about this room is, you can't see anything. But the smell nearly kills you. You gotta get outta here."
+
+East of the cellar is the chamber. 
 
 
  
